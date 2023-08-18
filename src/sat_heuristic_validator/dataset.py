@@ -1,8 +1,8 @@
 import itertools as it
 from typing import List, Sequence, Tuple
 
-from three_sat.satisfy import is_satisfiable_brute
-from three_sat.struct import And, Neg, Or, Var
+from sat_heuristic_validator.satisfy import is_satisfiable_brute
+from sat_heuristic_validator.struct import And, Neg, Or, Var
 
 
 def construct_dataset(formulas: Sequence[And]) -> List[Tuple[And, bool]]:

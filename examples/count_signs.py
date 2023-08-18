@@ -1,9 +1,9 @@
 import numpy as np
 
-from three_sat.dataset import only_3_cnf_dataset
-from three_sat.satisfy import count_vars
-from three_sat.struct import And, Neg
-from three_sat.validation import validate, ValidationMode
+from sat_heuristic_validator.dataset import only_3_cnf_dataset
+from sat_heuristic_validator.satisfy import count_vars
+from sat_heuristic_validator.struct import And, Neg
+from sat_heuristic_validator.validation import validate, ValidationMode
 
 def count_signs(f: And) -> bool:
     n = count_vars(f)

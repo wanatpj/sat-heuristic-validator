@@ -1,7 +1,7 @@
 import pytest
 
-from three_sat.struct import And, Neg, Or, Var
-from three_sat.satisfy import is_satisfiable_brute
+from sat_heuristic_validator.struct import And, Neg, Or, Var
+from sat_heuristic_validator.satisfy import is_satisfiable_brute
 
 
 @pytest.mark.parametrize(
@@ -20,7 +20,7 @@ def test_is_satisfiable_brute(formula, expectation):
 
 
 # @pytest.mark.parametrize(
-#     "three_sat_formula",
+#     "sat_heuristic_validator_formula",
 #     [
 #         *gen_3_sat_formulas(n=3),
 #         *gen_3_sat_formulas(n=4),
@@ -31,5 +31,5 @@ def test_is_satisfiable_brute(formula, expectation):
 #         *gen_3_sat_formulas(n=9),
 #     ]
 # )
-# def test_is_satisfiable_brute(three_sat_formula):
-#     assert solve_3_sat_brute(three_sat_formula) == researched_algorithm(three_sat_formula)
+# def test_is_satisfiable_brute(sat_heuristic_validator_formula):
+#     assert solve_3_sat_brute(sat_heuristic_validator_formula) == researched_algorithm(sat_heuristic_validator_formula)

@@ -1,6 +1,6 @@
 import pytest
 
-from three_sat.struct import And, Neg, Or, Var
+from sat_heuristic_validator.struct import And, Neg, Or, Var
 
 
 @pytest.mark.parametrize(

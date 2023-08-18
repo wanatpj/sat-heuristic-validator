@@ -1,4 +1,4 @@
-from three_sat.struct import And, Var
+from sat_heuristic_validator.struct import And, Var
 
 
 def count_vars(f: And) -> bool:

@@ -1,10 +1,10 @@
 import numpy as np
 import pytest
 
-from three_sat.aggregate import PerformanceMetrics
-from three_sat.dataset import only_3_cnf_dataset
-from three_sat.satisfy import is_satisfiable_brute
-from three_sat.validation import validate, ValidationMode
+from sat_heuristic_validator.aggregate import PerformanceMetrics
+from sat_heuristic_validator.dataset import only_3_cnf_dataset
+from sat_heuristic_validator.satisfy import is_satisfiable_brute
+from sat_heuristic_validator.validation import validate, ValidationMode
 
 
 @pytest.mark.parametrize(

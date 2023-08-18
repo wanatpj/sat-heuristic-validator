@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import numpy as np
 import sklearn.metrics
 
-from three_sat.struct import And
+from sat_heuristic_validator.struct import And
 
 
 @dataclass(eq=False)
