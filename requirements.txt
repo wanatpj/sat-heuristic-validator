@@ -1,4 +1,8 @@
+black
+flake8
 ipython
-scikit-learn
+mypy
+pylint
 pytest
+scikit-learn
 torch
