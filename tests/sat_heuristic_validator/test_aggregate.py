@@ -3,7 +3,12 @@ from unittest.mock import ANY
 import numpy as np
 import pytest
 
-from sat_heuristic_validator.aggregate import AggregationError, ConfusionAggregator, PerformanceMetrics, SampleAggregator
+from sat_heuristic_validator.aggregate import (
+    AggregationError,
+    ConfusionAggregator,
+    PerformanceMetrics,
+    SampleAggregator,
+)
 
 
 def test_sample_aggregator():

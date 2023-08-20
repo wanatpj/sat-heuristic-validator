@@ -29,7 +29,6 @@ class AggregationError(Exception):
 
 
 class Aggregator:
-
     @abstractmethod
     def aggregate(self, y_actual: bool, x: And, y_expected: bool):
         pass
@@ -40,7 +39,6 @@ class Aggregator:
 
 
 class ConfusionAggregator(Aggregator):
-
     def __init__(self):
         self.y_true = []
         self.y_pred = []
@@ -50,17 +48,18 @@ class ConfusionAggregator(Aggregator):
         self.y_pred.append(y_actual)
 
     def done(self):
-        conf_mat = sklearn.metrics.confusion_matrix(y_true=self.y_true, y_pred=self.y_pred)
+        conf_mat = sklearn.metrics.confusion_matrix(
+            y_true=self.y_true, y_pred=self.y_pred
+        )
         return PerformanceMetrics(
-            accuracy = conf_mat.diagonal().sum() / conf_mat.sum(),
-            precision = conf_mat.diagonal() / conf_mat.sum(axis=0),
-            recall = conf_mat.diagonal() / conf_mat.sum(axis=1),
-            confusion_matrix = conf_mat,
+            accuracy=conf_mat.diagonal().sum() / conf_mat.sum(),
+            precision=conf_mat.diagonal() / conf_mat.sum(axis=0),
+            recall=conf_mat.diagonal() / conf_mat.sum(axis=1),
+            confusion_matrix=conf_mat,
         )
 
 
 class SampleAggregator(Aggregator):
-
     def aggregate(self, y_actual: bool, x: And, y_expected: bool):
         if y_actual != y_expected:
             raise AggregationError(f"{y_actual=} x={x} {y_expected=}")
@@ -69,9 +68,7 @@ class SampleAggregator(Aggregator):
         pass
 
 
-
 class AllSamplesAggregator(Aggregator):
-
     def aggregate(self, y_actual: bool, x: And, y_expected: bool):
         if y_actual != y_expected:
             print(f"{y_actual=} x={x} {y_expected=}")
