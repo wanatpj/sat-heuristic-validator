@@ -17,8 +17,8 @@ setup(
     packages=find_namespace_packages("src"),
     package_dir={"": "src"},
     install_requires=[
+        "numpy",
         "scikit-learn",
-        "torch",
     ],
     setup_requires=["wheel", "bdist_wheel"],
 )
