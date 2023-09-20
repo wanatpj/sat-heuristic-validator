@@ -5,6 +5,7 @@ from sat_heuristic_validator.satisfy import count_vars
 from sat_heuristic_validator.struct import And, Neg
 from sat_heuristic_validator.validation import validate, ValidationMode
 
+
 def count_signs(f: And) -> bool:
     n = count_vars(f)
     counter = np.zeros(n)
@@ -20,10 +21,13 @@ def count_signs(f: And) -> bool:
             mask |= 1 << i
     return f.eval(mask=mask)
 
-print(validate(
-    algorithm=count_signs,
-    dataset=only_3_cnf_dataset(n=3),
-    validation_mode=ValidationMode.ALL_SAMPLES,
-))
+
+print(
+    validate(
+        algorithm=count_signs,
+        dataset=only_3_cnf_dataset(n=3),
+        validation_mode=ValidationMode.ALL_SAMPLES,
+    )
+)
 
 # Counterexample: (x1 ∨ x2 ∨ x3)∧(¬x1 ∨ ¬x2 ∨ ¬x3)

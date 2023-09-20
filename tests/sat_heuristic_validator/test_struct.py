@@ -7,7 +7,10 @@ from sat_heuristic_validator.struct import And, Neg, Or, Var
     "formula,string,representation",
     [
         (
-            And(Or(Var(i=1), Var(i=2), Neg(Var(i=3))), Or(Var(i=1), Var(i=4), Neg(Var(i=5)))),
+            And(
+                Or(Var(i=1), Var(i=2), Neg(Var(i=3))),
+                Or(Var(i=1), Var(i=4), Neg(Var(i=5))),
+            ),
             "(x1 ∨ x2 ∨ ¬x3)∧(x1 ∨ x4 ∨ ¬x5)",
             "And(Or(Var(1), Var(2), Neg(Var(3))), Or(Var(1), Var(4), Neg(Var(5))))",
         ),

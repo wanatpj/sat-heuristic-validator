@@ -2,7 +2,13 @@ from concurrent.futures import as_completed, ThreadPoolExecutor, ProcessPoolExec
 from enum import Enum
 from typing import Callable, List, Tuple
 
-from sat_heuristic_validator.aggregate import AggregationError, Aggregator, AllSamplesAggregator, ConfusionAggregator, SampleAggregator
+from sat_heuristic_validator.aggregate import (
+    AggregationError,
+    Aggregator,
+    AllSamplesAggregator,
+    ConfusionAggregator,
+    SampleAggregator,
+)
 from sat_heuristic_validator.struct import And
 
 
