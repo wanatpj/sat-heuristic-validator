@@ -12,6 +12,9 @@ jobs:
     permissions:
       id-token: write
     steps:
+    - name: Prepare distributions
+      run: |
+        python setup.py sdist
     - name: Publish package distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       if: startsWith(github.ref, 'refs/tags')
