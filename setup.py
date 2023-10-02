@@ -5,9 +5,6 @@ from setuptools import find_namespace_packages
 with open("VERSION", "r") as f:
     version = f.read().strip()
 
-with open("requirements.txt", "r") as f:
-    required_packages = f.read().split()
-
 setup(
     name="sat-heuristic-validator",
     version=version,
