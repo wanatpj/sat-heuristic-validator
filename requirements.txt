@@ -3,6 +3,8 @@ flake8
 ipython
 mypy
 numpy
+pandas
+plotly
 pylint
 pytest
 scikit-learn
