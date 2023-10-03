@@ -25,5 +25,5 @@ validate(
 - `ValidationMode.CONFUSION_MATRIX` - print confusion metrics
 - `ValidationMode.ALL_SAMPLES` - print all incorrectly labeled samples
 
-## How to use
+## Examples
 Check out [examples](https://github.com/wanatpj/3-SAT/tree/main/examples).
