@@ -13,6 +13,9 @@ setup(
     author_email="wanatpj+sat@gmail.com",
     packages=find_namespace_packages("src"),
     package_dir={"": "src"},
+    project_urls={
+        "Homepage": "https://github.com/wanatpj/sat-heuristic-validator",
+    },
     install_requires=[
         "numpy",
         "scikit-learn",
